@@ -1,0 +1,14 @@
+Description=InfoBeamer
+After=network.target
+
+
+[Service]
+ExecStart=/opt/info-beamer-pi/runib.sh
+WorkingDirectory=/srv/smb/green/
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
